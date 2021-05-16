@@ -10,14 +10,15 @@ public class Registration extends JFrame {
         super(title);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1000,500);
-        this.getRootPane().setBorder(BorderFactory.createEmptyBorder(4,4,4,4));
+        this.setBackground(Color.GREEN);
+        this.getRootPane().setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
 
         Container mainContainer = this.getContentPane();
         mainContainer.setLayout(new FlowLayout(FlowLayout.CENTER,5,0));
 
         JPanel leftPanel = new JPanel();
         leftPanel.setBackground(Color.MAGENTA);
-        leftPanel.setPreferredSize(new Dimension(220,200));
+        leftPanel.setPreferredSize(new Dimension(477,400));
         JLabel registrationLabel = new JLabel("Registration");
         leftPanel.add(registrationLabel);
 
@@ -25,7 +26,7 @@ public class Registration extends JFrame {
         //right panel
         JPanel rightPanel = new JPanel();
         rightPanel.setBackground(Color.CYAN);
-        rightPanel.setPreferredSize(new Dimension(220,200));
+        rightPanel.setPreferredSize(new Dimension(477,400));
 
 
         mainContainer.add(leftPanel);

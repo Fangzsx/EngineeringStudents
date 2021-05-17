@@ -4,6 +4,7 @@ import javax.imageio.plugins.jpeg.JPEGHuffmanTable;
 import javax.lang.model.util.ElementFilter;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+import javax.swing.table.TableModel;
 import java.awt.*;
 
 public class Registration extends JFrame {
@@ -81,6 +82,9 @@ public class Registration extends JFrame {
         JPanel rightPanel = new JPanel();
         rightPanel.setBackground(Color.CYAN);
         rightPanel.setPreferredSize(new Dimension(477,400));
+        rightPanel.setLayout(null);
+
+
 
 
         mainContainer.add(mainLeftPanel);

@@ -1,5 +1,6 @@
 package JDBC;
 
+import javax.imageio.plugins.jpeg.JPEGHuffmanTable;
 import javax.lang.model.util.ElementFilter;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -18,8 +19,7 @@ public class Registration extends JFrame {
 
         JPanel mainLeftPanel = new JPanel();
         mainLeftPanel.setLayout(null);
-        mainLeftPanel.setBackground(Color.MAGENTA);
-        mainLeftPanel.setPreferredSize(new Dimension(477,400));
+         mainLeftPanel.setPreferredSize(new Dimension(477,400));
         JLabel registrationLabel = new JLabel("Registration");
         registrationLabel.setBounds(10,25,80,20);
         mainLeftPanel.add(registrationLabel);
@@ -55,7 +55,23 @@ public class Registration extends JFrame {
         mainLeftPanel.add(leftPanel);
 
         //buttons
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setLayout(new FlowLayout(3, 30,0));
+        buttonPanel.setBorder(new EmptyBorder(5,5,5,5));
+        buttonPanel.setBounds(20,250,380,70);
 
+        JButton addButton = new JButton("Add");
+        addButton.setFocusable(false);
+        JButton editButton = new JButton("Edit");
+        editButton.setFocusable(false);
+        JButton deleteButton = new JButton("Delete");
+        deleteButton.setFocusable(false);
+
+        buttonPanel.add(addButton);
+        buttonPanel.add(editButton);
+        buttonPanel.add(deleteButton);
+
+        mainLeftPanel.add(buttonPanel);
 
 
 

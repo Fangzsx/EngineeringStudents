@@ -2,6 +2,7 @@ package JDBC;
 
 import javax.lang.model.util.ElementFilter;
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
 public class Registration extends JFrame {
@@ -16,43 +17,44 @@ public class Registration extends JFrame {
         mainContainer.setLayout(new FlowLayout(FlowLayout.CENTER,5,0));
 
         JPanel mainLeftPanel = new JPanel();
-        mainLeftPanel.setLayout(new BoxLayout(mainLeftPanel, BoxLayout.PAGE_AXIS));
+        mainLeftPanel.setLayout(null);
+        mainLeftPanel.setBackground(Color.MAGENTA);
         mainLeftPanel.setPreferredSize(new Dimension(477,400));
         JLabel registrationLabel = new JLabel("Registration");
+        registrationLabel.setBounds(10,25,80,20);
         mainLeftPanel.add(registrationLabel);
 
-        JPanel fillUpForm = new JPanel();
-        fillUpForm.setLayout(new BorderLayout());
+        //left panel
+        JPanel leftPanel = new JPanel();
+        leftPanel.setBorder(new EmptyBorder(10,10,10,10));
+        leftPanel.setBounds(0, 50, 300,150);
+        leftPanel.setLayout(new GridLayout(5,2,10,5));
 
         JLabel departmentLabel = new JLabel("Department");
-        JTextField departmentTF = new JTextField(10);
-
-        JLabel firstNameLabel = new JLabel("First Name");
-        JTextField firstNameTF = new JTextField(10);
-
-        JLabel lastNameLabel = new JLabel("Last Name");
-        JTextField lastNameTF = new JTextField(10);
-
-        JLabel passOutYearLabel = new JLabel("Pass Out Year");
-        JTextField passOutYearTF = new JTextField(5);
-
+        JTextField departmentField = new JTextField();
+        JLabel firstNameLabel = new JLabel("First name");
+        JTextField firstNameField = new JTextField();
+        JLabel lastNameLabel = new JLabel("Last name");
+        JTextField lastNameField = new JTextField();
+        JLabel passOutYearLabel = new JLabel("Pass out Year");
+        JTextField passOutYearField = new JTextField();
         JLabel universityRankLabel = new JLabel("University Rank");
-        JTextField universityRankTF = new JTextField(5);
+        JTextField universityRankField = new JTextField();
 
-        //add components to fillout form
-        fillUpForm.add(departmentLabel);
-        fillUpForm.add(departmentTF);
-        fillUpForm.add(firstNameLabel);
-        fillUpForm.add(firstNameTF);
-        fillUpForm.add(lastNameLabel);
-        fillUpForm.add(lastNameTF);
-        fillUpForm.add(passOutYearLabel);
-        fillUpForm.add(passOutYearTF);
-        fillUpForm.add(universityRankLabel);
-        fillUpForm.add(universityRankTF);
+        //add them to left panel
+        leftPanel.add(departmentLabel);
+        leftPanel.add(departmentField);
+        leftPanel.add(firstNameLabel);
+        leftPanel.add(firstNameField);
+        leftPanel.add(lastNameLabel);
+        leftPanel.add(lastNameField);
+        leftPanel.add(passOutYearLabel);
+        leftPanel.add(passOutYearField);
+        leftPanel.add(universityRankLabel);
+        leftPanel.add(universityRankField);
+        mainLeftPanel.add(leftPanel);
 
-        mainLeftPanel.add(fillUpForm);
-
+        //buttons
 
 
 
